@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <input placeholder="Enter Name"><button class="b">Get Roster</button>
+    <input placeholder="Enter Name"><button class="b">Get Roster</button><button class="dt">Dream Team Display</button>
     
     <div class="instr"></div>
     <div class="team"></div>
@@ -19,13 +19,15 @@
 </body>
 <script id="team-template" type="text/x-handlebars-template">
     <div class="plInfo" >
-        
+    
               {{#each pl}}
                 <div class="pl">
-                 <div>{{lname}} {{fname}}</div>
-                 <div>{{jersey}}</div>   
+                 <div class="lname">{{lname}}</div>
+                 <div class="fname">{{fname}}</div>
+                 <div class="jersey">{{jersey}}</div>   
                  <img src="http://nba-players.herokuapp.com/players/{{lname}}/{{fname}}" onerror="this.onerror=null;this.src='Player.PNG';" alt="Player">    
-                 <div>{{pos}}</div>   
+                 <div class="pos">{{pos}}</div>  
+                 <button class="addMe">Add To Dream Team</button> 
                 </div>
               {{/each}}
    </div>
